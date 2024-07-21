@@ -137,6 +137,12 @@ class CheckAllUsersStatus(APIView):
             message = 'account is Active!'
 
             user.save()
+
+            responses.append({
+                'user_id': user.id,
+                'message': message,
+                'data': [],
+            })
             
 
         return Response(responses, status=status.HTTP_200_OK)

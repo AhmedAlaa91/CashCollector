@@ -17,7 +17,7 @@ def start():
     scheduler.add_job(
         my_job,  # Pass the function directly
         trigger='interval',
-        seconds=10,
+         hours=1,
         id="my_job_id",
         replace_existing=True,
     )
